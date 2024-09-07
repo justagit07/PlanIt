@@ -4,6 +4,12 @@ dotenv.config()
 import dbconnection from './connection/dbconnection.js'
 import bodyParser from 'body-parser'
 import cors from 'cors'
+import userroutes from './routes/userroutes.js'
+
+
+
+
+
 const app = express()
 
 // middle ware to parse the request data
@@ -26,3 +32,8 @@ app.listen(process.env.PORT, ()=>
 {
     console.log(`your server is running at the 3000  http://localhost:${process.env.PORT}`);
 })
+
+
+// routes
+
+app.use('/user', userroutes)
