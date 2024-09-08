@@ -7,9 +7,6 @@ import cors from 'cors'
 import userroutes from './routes/userroutes.js'
 
 
-
-
-
 const app = express()
 
 // middle ware to parse the request data
